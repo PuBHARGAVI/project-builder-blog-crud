@@ -4,7 +4,9 @@ const myForm = document.getElementById("form");
 let postButton = document.getElementById("post");
 let selectedAnswers =  document.getElementById("answers");
 let edit = document.getElementById("edit");
+let delet = document.getElementById("delete");
 let blogTitle = document.getElementById("blog-title");
+//var ans1={};
 let blogDescription = document.getElementById("blog-description");
 	console.log(blogTitle);
 	console.log(blogDescription);
@@ -13,8 +15,16 @@ addBlog.onclick = () =>{
 	console.log("onclick");
 	document.getElementById('popup').style.display = "block";
 } 
-/*edit.onclick = () =>{
+edit.onclick = () =>{
 	document.getElementById('popup').style.display = "block";
+}
+/*delet.onclick = () =>{
+	document.getElementById('popup').style.display = "block";
+	delete ans1[document.getElementById("title").value];
+	selectedAnswers.value=ans;
+	console.log(selectedAnswers);
+	console.log(selectedAnswers.value);
+	myForm.submit();
 }*/
 //Function to Hide Popup
 function div_hide(){
@@ -25,11 +35,10 @@ function div_hide(){
 postButton.onclick = ()=>{
 	var ans=[];
 	let title=document.getElementById("title").value;
-	ans.push(title);
+	ans.add(title);
 	let message=document.getElementById("msg").value;
-	ans.push(message);
-
-	/*console.log(ans);*/
+	ans.add(message);
+	console.log(ans);
 	selectedAnswers.value=ans;
 	console.log(selectedAnswers);
 	console.log(selectedAnswers.value);
